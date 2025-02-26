@@ -33,9 +33,9 @@ sudo chown prometheus:prometheus /etc/prometheus /var/lib/prometheus
 ### **2️⃣ Download and Install Prometheus**
 ```bash
 cd /tmp
-curl -LO https://github.com/prometheus/prometheus/releases/latest/download/prometheus-*-linux-amd64.tar.gz
-tar -xvzf prometheus-*-linux-amd64.tar.gz
-cd prometheus-*-linux-amd64
+curl -LO  https://github.com/prometheus/prometheus/releases/download/v2.16.0/prometheus-2.16.0.linux-amd64.tar.gz
+tar -xvzf prometheus-2.16.0.linux-amd64.tar.gz
+cd prometheus-2.16.0.linux-amd64.tar.gz
 sudo cp prometheus promtool /usr/local/bin/
 sudo chown prometheus:prometheus /usr/local/bin/prometheus /usr/local/bin/promtool
 ```
@@ -84,6 +84,7 @@ curl http://localhost:9090
 
 ---
 
+
 ## **3. Install Node Exporter**
 
 ### **1️⃣ Create Node Exporter User**
@@ -94,9 +95,9 @@ sudo useradd --no-create-home --shell /bin/false node_exporter
 ### **2️⃣ Download and Install**
 ```bash
 cd /tmp
-curl -LO https://github.com/prometheus/node_exporter/releases/latest/download/node_exporter-*-linux-amd64.tar.gz
-tar -xvzf node_exporter-*-linux-amd64.tar.gz
-cd node_exporter-*-linux-amd64
+curl -LO  https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
+tar -xvzf node_exporter-0.18.1.linux-amd64.tar.gz
+cd node_exporter-0.18.1.linux-amd64.tar.gz
 sudo cp node_exporter /usr/local/bin/
 sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 ```
